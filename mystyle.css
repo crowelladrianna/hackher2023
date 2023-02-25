@@ -4,6 +4,7 @@ button:focus, button:active {background: green;}
 h1 {
     font-size: 2em;
     width: 100%;
+    color: #2c6434;
     font-family: Helvetica;
   }
 
