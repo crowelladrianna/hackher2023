@@ -1,0 +1,2 @@
+button { background: #red;}
+button:focus, button:active {background: green;}
