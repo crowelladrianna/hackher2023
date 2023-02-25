@@ -4,5 +4,17 @@ button:focus, button:active {background: green;}
 h1 {
     font-size: 2em;
     width: 100%;
-    font-family: 'Open Sans',Verdana,Sans-Serif;
+    font-family: Helvetica;
   }
+
+.food {
+    font-family: Helvetica;
+}
+
+.activities {
+    font-family: Helvetica;
+}
+
+.symptoms {
+    font-family: Helvetica;
+}
