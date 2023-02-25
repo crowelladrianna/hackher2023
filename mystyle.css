@@ -1,9 +1,20 @@
-button { background: #red;}
-button:focus, button:active {background: green;}
-
+button.unclicked {
+    background: red;
+}
+button.clicked {
+    background: blue;
+}
 h1 {
     font-size: 2em;
     padding-top: 100px;
     width: 100%;
     font-family: 'Open Sans',Verdana,Sans-Serif;
-  }
+}
+
+input[type=text] {
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+#options_list{
+    display: none;
+}
