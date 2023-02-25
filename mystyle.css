@@ -1,0 +1,9 @@
+button { background: #red;}
+button:focus, button:active {background: green;}
+
+h1 {
+    font-size: 2em;
+    padding-top: 100px;
+    width: 100%;
+    font-family: 'Open Sans',Verdana,Sans-Serif;
+  }
