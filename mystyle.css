@@ -96,7 +96,6 @@ input[type=text] {
 }
 
 button {
-  background-color: #04AA6D;
   color: white;
   padding: 20px;
   text-align: center;
@@ -109,6 +108,7 @@ button {
   border-radius: 50%;
   box-shadow: 0 6px 8px 0 var(--color-four), 0 3px 10px 0 var(--color-four);
 }
+
 a {
     text-decoration: none;
     color: var(--color-three);
@@ -133,11 +133,31 @@ a {
     color: var(--color-ten);
     margin: 3px;
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
     list-style: none;
     list-style-position: inside;
     border-radius: 10px;
     box-shadow: 0 6px 8px 0 var(--color-four), 0 3px 10px 0 var(--color-four);
+}
+
+.whole_text {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.food_eaten a {
+    width: 5%;
+    background: var(--color-one);
+    color: var(--color-nine);
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    padding: 2px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    border-radius: 50%;
 }
 
 .select {

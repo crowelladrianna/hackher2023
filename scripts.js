@@ -25,7 +25,7 @@ function button_clicking(){
 
 function loadSearchData(){
     let foods_available = ["Energy drink (Monster)", "Almond milk (unsweetened)", "Peanut butter", "Chocolate by GHIRARDELLI","Ranch dressing by FRESH & EASY","Pizza rolls","TACO BELL, Bean Burrito","Annie's organic classic cheddar macaroni & cheese by GENERAL MILLS SALES INC.","CAMPBELL'S CHUNKY, New England Clam Chowder","Yogurt, CHOBANI, plain, whole, Greek","Artisan pepperoni fresh mozzerella wraps by Formaggio Italian Cheese Specialties Inc","Plum ice cream by Tillamook County Creamery Association","Chicken nuggets, from frozen","Eggland's Best Vegetarian Grade AA White Eggs Large","Chicken drumstick, skin eaten, rotisserie","Dave's Killer Bread 21 Grains","Mott's no sugar added Cinnamon applesauce","Black cherry spread by BONNE MAMAN"];
-    let macros = ["Carbs: 2g, Protein: 0g, Fat: 11.001g","Carbs: 63.53g, Protein: 10.94g, Fat: 12.495g","Carbs: 57.78g, Protein: 13.6g, Fat: 11.193g","Carbs: 50g, Protein: 9g, Fat: 3.003g","Carbs: 22.62g, Protein: 6.17g, Fat: 9.664g","Carbs: 3.24g, Protein: 8.24g, Fat: 4.01g","Carbs: 1g, Protein: 6g, Fat: 6.001g","Carbs: 21g, Protein: 3g, Fat: 8.001g","Carbs: 25.03g, Protein: 18.7g, Fat: 26.922g","Carbs: 0g, Protein: 6g, Fat: 4g","Carbs: 0.16g, Protein: 34.63g, Fat: 15.471g","Carbs: 22g, Protein: 5g, Fat: 1.5g","Carbs: 13g, Protein: 0g, Fat: 0g","Carbs: 13g, Protein: 0g, Fat: 0g"];
+    let macros = ["Carbs: 3.5g, Protein: 0.15g, Fat: 0g","Carbs: 3.2g, Protein: 0.98g, Fat: 2.342g","Carbs: 3.57g, Protein: 3.6g, Fat: 8.176g","Carbs: 27g, Protein: 2g, Fat: 13.002g","Carbs: 2g, Protein: 0g, Fat: 11.001g","Carbs: 63.53g, Protein: 10.94g, Fat: 12.495g","Carbs: 57.78g, Protein: 13.6g, Fat: 11.193g","Carbs: 50g, Protein: 9g, Fat: 3.003g","Carbs: 22.62g, Protein: 6.17g, Fat: 9.664g","Carbs: 3.24g, Protein: 8.24g, Fat: 4.01g","Carbs: 1g, Protein: 6g, Fat: 6.001g","Carbs: 21g, Protein: 3g, Fat: 8.001g","Carbs: 25.03g, Protein: 18.7g, Fat: 26.922g","Carbs: 0g, Protein: 6g, Fat: 4g","Carbs: 0.16g, Protein: 34.63g, Fat: 15.471g","Carbs: 22g, Protein: 5g, Fat: 1.5g","Carbs: 13g, Protein: 0g, Fat: 0g","Carbs: 13g, Protein: 0g, Fat: 0g"];
     let options_list = document.getElementById('options_list');
     for(let i=0; i<foods_available.length; i++){
         let li = document.createElement("li");
@@ -52,7 +52,7 @@ function search(){
     input = input.toLowerCase(); 
     let noResults = true;
     for (i = 0; i < listItems.length; i++) { 
-        if (!listItems[i].innerHTML.toLowerCase().includes(input) || input === "") {
+        if (!listItems[i].innerText.toLowerCase().includes(input) || input === "") {
             listItems[i].style.display="none";
             continue;
         }
@@ -67,16 +67,31 @@ function search(){
 function populate_food(){
     let list = document.getElementById("food_list"); 
     for(let i = 0; i<foods_eaten.length; i++) {
-      let li = document.createElement("li");
-      let d1 = document.createElement("div");
-      let d2 = document.createElement("div");
-      d2.setAttribute("id", "macros_text")
-      d1.innerText = foods_eaten[i];
-      d2.innerText = macros_eaten[i];
-      li.appendChild(d1);
-      li.appendChild(d2);
-      li.classList.add("food_eaten")
-      list.appendChild(li);
+        let li = document.createElement("li");
+        let d1 = document.createElement("div");
+        let d2 = document.createElement("div");
+        let d12 = document.createElement("div");
+        let x = document.createElement("a");
+        x.href = "#";
+        x.classList.add("remove");
+        d12.classList.add("whole_text");
+        d1.innerText = foods_eaten[i];
+        d2.innerText = macros_eaten[i];
+        x.innerText = "X";
+        d12.appendChild(d1);
+        d12.appendChild(d2);
+
+        x.addEventListener("click", function() {
+            foods_eaten.splice(i, 1);
+            macros_eaten.splice(i, 1);
+            remove_food();
+            populate_food();
+        });
+        
+        li.appendChild(x);
+        li.appendChild(d12);
+        li.classList.add("food_eaten")
+        list.appendChild(li);
     };
 }
 
