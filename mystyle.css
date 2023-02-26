@@ -11,6 +11,8 @@
     --color-eight: #4c7c54;
     --color-nine: #486c48;
     --color-ten: #d4d8d5;
+    --h1-font-size: 2em;
+    --h2-font-size: 1.5em;
 }
 html{
     scroll-behavior: smooth; 
@@ -21,42 +23,46 @@ button{
 }
 button.unclicked {
     background: var(--color-one);
+    color: var(--color-nine);
 }
+
 button.clicked {
-    background: #648c64;
-    background: var(--color-eight);
+    background: var(--color-nine);
     color: var(--color-one);
-    
-}
-button.clicked {
-    background: var(--color-six);
-    color: var(--color-three);
 
 }
 h1 {
-    font-size: 2em;
+    font-size: var(--h1-font-size);
     width: 100%;
     color: var(--color-three);
-    font-family: Helvetica;
 }
-
+h2{
+    color: var(--color-nine);
+    font-size: var(--h2-font-size);
+}
 input[type=text] {
     -webkit-transition: width 0.15s ease-in-out;
     transition: width 0.15s ease-in-out;
+    color: var(--color-three);
 }
 #options_list{
     display: none;
+    list-style-type: none;
     color: var(--color-three);
 }
 
 .food {
     font-family: Helvetica;
+    color: var(--color-three);
 }
 
 .searchbar {
     font-family: Helvetica;
 }
-
+#searchbar{
+    background: var(--color-one);
+    
+}
 .activities {
     font-family: Helvetica;
 }
@@ -67,7 +73,6 @@ input[type=text] {
 
 button {
   background-color: #04AA6D;
-  border: none;
   color: white;
   padding: 20px;
   text-align: center;
@@ -78,6 +83,11 @@ button {
   height: 120px;
   width: 120px;
   border-radius: 50%;
+  /* box-shadow: 0 8px 16px 0 var(--color-four), 0 6px 20px 0 var(--color-four; */
+}
+a {
+    text-decoration: none;
+    color: var(--color-three);
 }
 
 .container {
@@ -105,3 +115,14 @@ button {
     padding-left: 0;
     margin-left: 0;
 }
+@media only screen and (min-width: 600px){
+    /*For tablets: */
+    .symptoms {width: 100%};
+    .activities {width: 100%};
+    .searchbar{width: 100%};
+    .food {width: 100%};
+
+}
+/* @media only screen and (min-width: 768px){
+
+} */
