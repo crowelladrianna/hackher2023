@@ -1,4 +1,5 @@
-let foods_eaten = ["Bagel", "Ice Cream"];
+let foods_eaten = [];
+let macros_eaten = []
 
 function onload(){
     button_clicking();
@@ -24,22 +25,24 @@ function button_clicking(){
 
 function loadSearchData(){
     let foods_available = ["Bagel", "Apple", "Iced Chai", "Coffee"];
+    let macros = ["Carbs: 5mg, Protein: 5mg, Fat: 5mg", "Carbs: 5mg, Protein: 5mg, Fat: 5mg", "Carbs: 5mg, Protein: 5mg, Fat: 5mg", "Carbs: 5mg, Protein: 5mg, Fat: 5mg"];
     let options_list = document.getElementById('options_list');
-    foods_available.forEach((item) => {
+    for(let i=0; i<foods_available.length; i++){
         let li = document.createElement("li");
         let a = document.createElement("a");
         a.href = "#";
-        a.textContent = item;
+        a.textContent = foods_available[i];
         a.classList.add("food_add_link");
         a.addEventListener("click", function() {
-            foods_eaten.push(item);
+            foods_eaten.push(foods_available[i]);
+            macros_eaten.push(macros[i]);
             remove_food();
             populate_food();
         });
         li.classList.add("food_item");
         li.appendChild(a);
         options_list.appendChild(li);
-    })
+    }
 }
 
 function search(){
@@ -63,12 +66,18 @@ function search(){
 
 function populate_food(){
     let list = document.getElementById("food_list"); 
-    foods_eaten.forEach((item) => {
+    for(let i = 0; i<foods_eaten.length; i++) {
       let li = document.createElement("li");
-      li.innerText = item;
+      let d1 = document.createElement("div");
+      let d2 = document.createElement("div");
+      d2.setAttribute("id", "macros_text")
+      d1.innerText = foods_eaten[i];
+      d2.innerText = macros_eaten[i];
+      li.appendChild(d1);
+      li.appendChild(d2);
       li.classList.add("food_eaten")
       list.appendChild(li);
-    });
+    };
 }
 
 function remove_food(){
