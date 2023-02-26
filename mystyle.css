@@ -30,3 +30,7 @@ input[type=text] {
 .symptoms {
     font-family: Helvetica;
 }
+
+.selectable unclicked {
+    border-radius: 70%;
+}
