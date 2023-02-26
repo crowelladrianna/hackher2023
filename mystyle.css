@@ -1,8 +1,8 @@
 button.unclicked {
-    background: red;
+    background: #c4d0c6;
 }
 button.clicked {
-    background: blue;
+    background: #648c64;
 }
 h1 {
     font-size: 2em;
@@ -23,10 +23,29 @@ input[type=text] {
     font-family: Helvetica;
 }
 
+.searchbar {
+    font-family: Helvetica;
+}
+
 .activities {
     font-family: Helvetica;
 }
 
 .symptoms {
     font-family: Helvetica;
+}
+
+button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
