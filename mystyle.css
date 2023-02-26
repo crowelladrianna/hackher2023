@@ -1,13 +1,42 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+:root {
+    --color-one: #c4d0c6;
+    --color-two: #648c64;
+    --color-three: #2c6434;
+    --color-four: #94ac94;
+    --color-five: #8cac94;
+    --color-six: #8cac8c;
+    --color-seven: #5c8c64;
+    --color-eight: #4c7c54;
+    --color-nine: #486c48;
+    --color-ten: #d4d8d5;
+}
+html{
+    scroll-behavior: smooth; 
+    background: var(--color-ten);
+}
+button{ 
+    list-style-type: none;
+}
 button.unclicked {
     background: #c4d0c6;
 }
 button.clicked {
     background: #648c64;
+    background: var(--color-eight);
+    color: var(--color-one);
+    
+}
+button.clicked {
+    background: var(--color-six);
+    color: var(--color-three);
+
 }
 h1 {
     font-size: 2em;
     width: 100%;
-    color: #2c6434;
+    color: var(--color-three);
     font-family: Helvetica;
 }
 
@@ -17,6 +46,7 @@ input[type=text] {
 }
 #options_list{
     display: none;
+    color: var(--color-three);
 }
 
 .food {
