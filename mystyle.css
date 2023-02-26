@@ -20,6 +20,7 @@ html{
 }
 header{
     color: var(--color-two);
+    background-color: var(--color-ten);
 }
 button{ 
     list-style-type: none;
