@@ -16,7 +16,7 @@
 }
 html{
     scroll-behavior: smooth; 
-    background: var(--color-ten);
+    background: white;
 }
 header{
     color: var(--color-two);
