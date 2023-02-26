@@ -117,6 +117,9 @@ a {
 }
 
 .food_eaten {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: var(--color-nine);
     color: var(--color-ten);
     margin: 3px;
