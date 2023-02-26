@@ -1,6 +1,9 @@
+let foods_eaten = ["Bagel", "Ice Cream"];
+
 function onload(){
     button_clicking();
     loadSearchData();
+    populate_food();
 }
 
 function button_clicking(){
@@ -24,8 +27,17 @@ function loadSearchData(){
     let options_list = document.getElementById('options_list');
     foods_available.forEach((item) => {
         let li = document.createElement("li");
-        li.classList.add("food_item")
-        li.innerText = item;
+        let a = document.createElement("a");
+        a.href = "#";
+        a.textContent = item;
+        a.classList.add("food_add_link");
+        a.addEventListener("click", function() {
+            foods_eaten.push(item);
+            remove_food();
+            populate_food();
+        });
+        li.classList.add("food_item");
+        li.appendChild(a);
         options_list.appendChild(li);
     })
 }
@@ -50,12 +62,14 @@ function search(){
 }
 
 function populate_food(){
-    let food_names = ["Bagel", "Apple", "Iced Chai"];
-                         
     let list = document.getElementById("food_list"); 
-    food_names.forEach((item) => {
+    foods_eaten.forEach((item) => {
       let li = document.createElement("li");
       li.innerText = item;
       list.appendChild(li);
     });
+}
+
+function remove_food(){
+    document.getElementById("food_list").innerHTML = "";
 }
