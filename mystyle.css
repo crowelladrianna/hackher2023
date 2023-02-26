@@ -18,17 +18,22 @@ html{
     scroll-behavior: smooth; 
     background: var(--color-ten);
 }
+header{
+    color: var(--color-two);
+}
 button{ 
     list-style-type: none;
 }
 button.unclicked {
     background: var(--color-one);
     color: var(--color-nine);
+    border: 0;
 }
 
 button.clicked {
     background: var(--color-nine);
     color: var(--color-one);
+    border: 0;
 
 }
 h1 {
@@ -83,7 +88,7 @@ button {
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  /* box-shadow: 0 8px 16px 0 var(--color-four), 0 6px 20px 0 var(--color-four; */
+  box-shadow: 0 6px 8px 0 var(--color-four), 0 3px 10px 0 var(--color-four);
 }
 a {
     text-decoration: none;
@@ -102,13 +107,15 @@ a {
 }
 
 .food_eaten {
-    background-color: var(--color-one);
+    background-color: var(--color-nine);
+    color: var(--color-ten);
     margin: 3px;
     padding: 10px;
     padding-left: 20px;
     list-style: none;
     list-style-position: inside;
-    border-radius: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px 0 var(--color-four), 0 3px 10px 0 var(--color-four);
 }
 
 .select {
