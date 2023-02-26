@@ -17,11 +17,20 @@
 html{
     scroll-behavior: smooth; 
     background: white;
+    margin: 0;
 }
-header{
-    color: var(--color-two);
-    background-color: var(--color-ten);
+body {
+    margin: 0;
 }
+.header{
+    color: var(--color-three);
+    background-color: var(--color-one);
+    margin: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 button{ 
     list-style-type: none;
 }
@@ -42,7 +51,7 @@ h1 {
     width: 100%;
     color: var(--color-three);
 }
-h2{
+h2, h3{
     color: var(--color-nine);
     font-size: var(--h2-font-size);
 }
