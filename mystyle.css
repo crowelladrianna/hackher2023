@@ -95,6 +95,7 @@ button {
     background-color: var(--color-one);
     margin: 3px;
     padding: 10px;
+    padding-left: 20px;
     list-style: none;
     list-style-position: inside;
     border-radius: 20px;
