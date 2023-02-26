@@ -20,7 +20,7 @@ button{
     list-style-type: none;
 }
 button.unclicked {
-    background: #c4d0c6;
+    background: var(--color-one);
 }
 button.clicked {
     background: #648c64;
@@ -78,4 +78,29 @@ button {
   height: 120px;
   width: 120px;
   border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#food_list {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.food_eaten {
+    background-color: var(--color-one);
+    margin: 3px;
+    padding: 10px;
+    list-style: none;
+    list-style-position: inside;
+    border-radius: 20px;
+}
+
+.select {
+    padding-left: 0;
+    margin-left: 0;
 }

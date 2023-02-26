@@ -66,6 +66,7 @@ function populate_food(){
     foods_eaten.forEach((item) => {
       let li = document.createElement("li");
       li.innerText = item;
+      li.classList.add("food_eaten")
       list.appendChild(li);
     });
 }
